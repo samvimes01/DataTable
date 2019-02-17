@@ -1,0 +1,94 @@
+[data-component="table-data"]{
+  background:url(./img/border.svg);
+}
+
+table {
+  padding: 4px;
+  border-collapse: collapse;
+  margin: 0px 4px;
+}
+
+tbody tr {
+  border-top: 1px solid #000;
+}
+
+th {
+  min-width: 80px;
+  height: 25px;
+}
+
+.unsorted, .asc, .desc {
+  cursor: pointer;
+}
+
+td:first-child {
+  text-align: center;
+}
+
+td {
+  padding-bottom: 5px;
+}
+
+.unsorted::after {
+  content: "↑↓"
+}
+.asc::after {
+  content: "↓"
+}
+.desc::after {
+  content: "↑"
+}
+
+.invisible {
+  display: none;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.filter {
+  text-align: right;
+  margin: 0 0 -40px;
+}
+
+.filter input, .paginator select {
+  background:url(./img/border.svg);
+  border: none;
+  padding: 0px 2px;
+  height: 20px;
+}
+
+.paginator {
+  user-select: none;
+  width: 60%;
+}
+
+.paginator__page-button {
+  border: 1px solid black;
+  background-color: #777;
+  padding: 5px;
+  margin: 0px 2px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.paginator__page-button:hover {
+  background-color: #aaa;
+}
+
+.paginator__page-button--current {
+  background: conic-gradient(from 45deg, gold, #0ac, gold);
+  color: #000;
+}
+
+.paginator, .paginator__page-info {
+  position: relative;
+  padding: 3px;
+  margin: 10px 0px;
+}
+
+.paginator__page-info {
+  font-weight: bold;
+}
